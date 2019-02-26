@@ -1,0 +1,36 @@
+@value heightNav: 60px;
+
+@mixin navHeight {
+  height: heightNav;
+  line-height: heightNav;
+}
+
+.nav {
+  background-color: red;
+  &Container {
+    display: grid;
+    grid-template-columns: 100px auto 1fr 1fr 50px;
+    grid-template-rows: heightNav;
+    grid-template-areas: ". brand out in ."
+  }
+  &Logo {
+    grid-area: brand;
+    align-self: center;
+    color: white;
+    font-size: 28px;
+    transition: 600ms;
+    @include navHeight;
+    &:hover {
+      color: black;
+    }
+  }
+  & ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    & li{
+      display: inline-block;
+      padding: 0 15px;
+    }
+  }
+}

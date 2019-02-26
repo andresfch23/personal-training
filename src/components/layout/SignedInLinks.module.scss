@@ -1,0 +1,32 @@
+@import  './Navbar.module.scss';
+
+.container {
+  padding: 0;
+  color: black;
+  grid-area: in;
+  @include navHeight;
+  & li {
+    & a {
+      color: inherit;
+    }
+    &:hover:not(:nth-child(3)) {
+      background-color: #da0000;
+    }
+  }
+  &User {
+    position: relative;
+    width: 10px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 40px;
+  }
+}
+
+.user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

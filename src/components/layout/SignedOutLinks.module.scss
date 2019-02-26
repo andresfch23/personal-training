@@ -1,0 +1,18 @@
+@import  './Navbar.module.scss';
+
+.container{
+  padding: 0;
+  color: black;
+  grid-area: out;
+  justify-self: flex-end;
+  @include navHeight;
+  & li {
+    &:hover {
+      color: black;
+      background-color: #da0000;
+    }
+    & a {
+      color: inherit;
+    }
+  } 
+}
